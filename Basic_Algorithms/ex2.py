@@ -1,4 +1,5 @@
 # 3382区间次方和
+# https://www.lanqiao.cn/problems/3382/learning/
 # 为了更快的计算区间次方和，可以先计算出所有次方和存储起来，再直接查表
 def prefixes(a):  #求前缀和
     sum = [0] * (len(a))
