@@ -36,4 +36,4 @@ for i in range(q):
     ans.append(root.search(x) ^ x)
 for i in range(q):
     print(ans[i])
-    print()  # 用于换行
+    print()  
