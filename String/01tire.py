@@ -13,4 +13,4 @@ class Tree():
             node=node.children[key]
         node.isleaf=True
 
-    def
+    
