@@ -1,4 +1,5 @@
 # 3820 混境之地
+# https://www.lanqiao.cn/problems/3820/learning/
 from functools import (
     lru_cache,
 )  # 使用lru_cache装饰器，可以缓存函数的返回值，相当于记忆化搜索，避免重复计算
