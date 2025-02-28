@@ -1,4 +1,5 @@
 # 216 地宫取宝
+# https://www.lanqiao.cn/problems/216/learning/
 n, m, k = map(int, input().split())
 Value = []
 for i in range(n):
