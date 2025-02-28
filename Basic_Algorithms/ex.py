@@ -1,4 +1,5 @@
 # 3419小蓝的平衡字符串
+# https://www.lanqiao.cn/problems/3419/learning/
 str = input()
 ans = 0
 gaps = 0  # gaps是L和Q数量的差值，属于前缀和的思想
