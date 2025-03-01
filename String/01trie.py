@@ -1,5 +1,5 @@
 # https://www.lanqiao.cn/problems/8616/learning/
-class Tree:
+class Tree:  # 注意不需要加括号
     def __init__(self):
         self.children = [None, None]
         self.isleaf = 0
