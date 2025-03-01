@@ -1,19 +1,22 @@
 # https://www.lanqiao.cn/problems/742/learning/
 n = int(input())
-height_array = []
-for i in range(n):
-    height_array.append(int(input))
+height_array = list((map(int, input().split())))
 
 
 def dynamic_programming():
-    for i in range(n):
-        for j in range(n):
-            if j == i:
-                continue
-            else:
-                if dp[j] > dp[i] and height_array[j] < height_array[i]:
-                    dp[i] = dp[j] + 1
+    for i in range(1, n):
+        dp[i] = 1
+        for j in range(i):
+            if dp[j] + 1 > dp[i] and height_array[j] < height_array[i]:
+                dp[i] = dp[j] + 1
+        for j in range(i+1,n):
+            
 
 
 dp = [0] * n
-print(n - max(dp))
+dp2= [0] * n
+dp[0] = 1
+
+dynamic_programming()
+print(max(dp))
+print(dp)
