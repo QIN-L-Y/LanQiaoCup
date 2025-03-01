@@ -5,20 +5,16 @@ height_array = list((map(int, input().split())))
 
 def dynamic_programming():
     for i in range(1, n):
-        dp[i] = 1
-        dp2[i]=1
         for j in range(i):
             if dp[j] + 1 > dp[i] and height_array[j] < height_array[i]:
                 dp[i] = dp[j] + 1
-        for j in range(i+1,n):
-            if dp2[j]+1>dp[i] and height_array[j]<height_array[i]:
-                dp2[i]=dp2[j+1]
-    return max(dp)+max(dp2)
+    for i in range(n - 1, -1, -1):
+        for j in range(n - 1, i, -1):
+            if dp2[j] + 1 > dp2[i] and height_array[j] < height_array[i]:
+                dp2[i] = dp2[j] + 1
+    return max(dp[i] + dp2[i] for i in range(n)) - 1
 
 
-dp = [0] * n
-dp2= [0] * n
-dp[0] = 1
-
-print(n-dynamic_programming())
-
+dp = [1] * n
+dp2 = [1] * n
+print(n - dynamic_programming())
