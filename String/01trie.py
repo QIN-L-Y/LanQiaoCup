@@ -17,9 +17,11 @@ class Tree:
         node = self
         for i in range(32):
             binary = (number >> (31 - i)) & 1
-            if node.children[binary ^ 1] is not None:
+            if (
+                node.children[binary ^ 1] is not None
+            ):  # 如果存在相反的子节点，就往相反的子节点走
                 node = node.children[binary ^ 1]
-            else:
+            else:  # 否则就往原来的子节点走
                 node = node.children[binary]
         return node.isleaf
 
