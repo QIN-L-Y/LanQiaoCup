@@ -20,3 +20,4 @@ def dynamic_programming():
 dp = [1] * n  # 记录从左往右的最长上升子序列
 dp2 = [1] * n  # 记录从右往左的最长上升子序列
 print(n - dynamic_programming())
+# ceshi
